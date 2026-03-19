@@ -37,7 +37,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Push Image to docker hub
-      run: docker push tunh132/devops-learn-image:latest
+      run: docker push devops-learn-image ${{ secrets.DOCKERHUB_USERNAME }}/devops-learn-image:latest
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
